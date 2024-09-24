@@ -1,7 +1,11 @@
 from django.shortcuts import render
+<<<<<<< HEAD
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+=======
+from rest_framework.decorators import api_view
+>>>>>>> aaefb09 (Made some changes)
 from rest_framework.response import Response
 from rest_framework import status
 from . serilaisers import *
@@ -18,6 +22,7 @@ def homeView(request):
     return Response(message, status=status.HTTP_200_OK) 
 
 @api_view(['GET', 'POST'])
+<<<<<<< HEAD
 @permission_classes([IsAuthenticated])
 @authentication_classes([TokenAuthentication])
 def toDoView(request):
@@ -25,6 +30,12 @@ def toDoView(request):
     if request.method == 'GET':
         search = request.GET.get('search')
         all_todo = ToDo.objects.filter(owner = user.id)
+=======
+def toDoView(request):
+    if request.method == 'GET':
+        search = request.GET.get('search')
+        all_todo = ToDo.objects.all()
+>>>>>>> aaefb09 (Made some changes)
         if search:
             all_todo = all_todo.filter(
                 Q(name__icontains = search) |

@@ -1,0 +1,84 @@
+/* Container for centering the form on the page */
+.register-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the registration form */
+.register {
+    width: 50%;
+    border: 1px solid rgb(179, 177, 177);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+/* Form labels */
+.register form label {
+    display: block;
+    padding: 5px 0;
+}
+
+/* Form input fields */
+.register form input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgb(179, 177, 177);
+}
+
+/* Form input fields focus state */
+.register form input:focus {
+    outline: none;
+}
+
+/* Container for the links with space between them */
+.register form .links {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0; /* Added padding for more space */
+}
+
+/* Styling for the links */
+.register form .links a {
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+/* Styling for the second link */
+.register form .links a:last-child {
+    color: red;
+}
+
+/* Submit button styling */
+.register form button {
+    width: 100%;
+    padding: 8px;
+    background: teal;
+    color: white;
+    border: none;
+    border-bottom: 3px solid tomato;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Error message styling */
+.register form p {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Form heading styling */
+.register form h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
